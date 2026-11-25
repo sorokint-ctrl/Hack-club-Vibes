@@ -1,0 +1,47 @@
+.container{ display: inline-block; }
+
+body{
+    margin: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    align-items: flex-start;
+    overflow: hidden;
+
+}
+.container { 
+    display: flex; 
+    justify-content: center;
+    width: 100%;             
+}
+
+.text{
+    font-size: 5em;
+    letter-spacing: 4px;
+    font-family: monospace;
+    border-right:5px solid;
+    width: 0%;
+    white-space: nowrap;
+    overflow: hidden;
+    justify-content: center;
+    margin: 0 auto;
+    animation:
+        typing 8s infinite,
+        deleting 8s infinite,
+        cursor .4s infinite alternate;
+}
+@keyframes typing {
+    0%{width:0%; animation-timing-function: steps(15, end);}
+    40%, 60% {width: 17ch;}
+    100%{width:0%;}
+}
+@keyframes cursor {
+    50% {border-color: transparent;}
+}
+@keyframes deleting {
+    0%, 60% { max-width: 17ch; animation-timing-function: steps(15, end); } 
+    100% { max-width: 0%; }
+
+}
+

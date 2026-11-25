@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .fancy-square-button {
+            width: 250px;
+            height: 250px;
+            border-radius: 16px;
+        
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            padding: 20px;
+            box-sizing: border-box;
+            background-color:#81a1c1;
+            font-size: 0.75em;
+            font:"Pacifica";
+        }
+        body{
+            background-color:#3b4252;
+        }
+        h1{
+            font-size:5em;
+            font-color:#d8dee9;
+            font-family:'poppins', sans-serif;
+        
+        }
+        .center{
+            text-align: "center";
+        }
+        p{
+            font-size: 3em;
+            font-color:#d8dee9;
+            font-family:'Poppins',sans-serif;
+        }
+        .button-row{
+            display:flex;
+            gap:20px;
+            justify-content:center;
+            margin-top:30px;
+        }
+    </style>
+</head>
+<body>
+    <div class="center">
+        <h1>Once your ready the volume will Start</h1>
+    </div>
+    <audio id="mySound" src="sound.mp3"></audio>
+    <div class="button-row";>
+        <button class="fancy-square-button"; onclick="playsound()">Play sound</button>
+    </div>
+    <script>
+        function playSound() {
+            const audio = document.getElementById("mySound");
+            audio.currentTime = 0; // Optional: Rewinds to the start if clicked rapidly
+            audio.play();
+        }
+</script>
+</body>
+</html>
